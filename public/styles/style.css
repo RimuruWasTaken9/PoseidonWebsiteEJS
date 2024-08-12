@@ -1,0 +1,459 @@
+/***********************
+* ASSETS FOR ALL PAGES *
+************************/
+/* header */
+header {
+  font-weight: 500;
+  font-size: 1.35em;
+  padding: 0 1.875em;
+  color: #00529b;
+}
+@media all and (max-width: 350px)
+{
+.min-center {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.min-center li {
+  text-align: center;
+  margin-left: 10px;
+}
+}
+
+
+
+/* footer */
+#footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 1.875em;
+  padding: 0 1.875em;
+  margin: 0 auto;
+  background-color: #00529b;
+  position: relative;
+  border-left: 1px solid #6d6d6d;
+  border-right: 1px solid #6d6d6d;
+  z-index: 5;
+  color: white;
+}
+
+#footer h5 {
+  text-align: left !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.about-text span {
+  font-style: italic;
+}
+.icon-list {
+  list-style-type: none; /* Remove default bullet points */
+  padding-left: 0; /* Remove default padding */
+}
+
+.icon-list li {
+  padding-left: 30px; /* Space for the custom icon */
+  background-size: 20px 20px; /* Size of the custom icon */
+  text-align: left;
+  margin-bottom: 10px; /* Space between list items */
+}
+.social img {
+  height: 30px;
+  width: auto;
+  border-radius: 40%;
+}
+.home-icon {
+  background: url("../images/shared/home.png") no-repeat left center;
+}
+.phone-icon {
+  background: url("../images/shared/phone.png") no-repeat left center;
+}
+.email-icon {
+  background: url("../images/shared/email.png") no-repeat left center;
+}
+
+.social {
+  display: flex;
+}
+.about-text p {
+  text-align: left;
+}
+footer img {
+  height: 130px;
+  width: auto;
+  border-radius: 40%;
+}
+.copyright {
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.home-button {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+#footer-container p {
+  color: white;
+}
+
+/* other */
+hr {
+  border: 1px solid #00529b; /* Remove default border */
+  margin: 5%; /* Optional: add vertical margins */
+}
+.nav-selected {
+  text-decoration: underline;
+}
+
+/***********************
+*       HOME PAGE      *
+************************/
+#photos {
+  background-color: #00529b;
+
+}
+.carousel {
+  position: relative;
+
+}
+.carousel-item img {
+  object-fit: cover;
+}
+.carousel-container img {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+#carousel-thumbs {
+ 
+  bottom: 0;
+  left: 0;
+  padding: 0 50px;
+  right: 0;
+}
+#carousel-thumbs img {
+  opacity: 0.5;
+  cursor: pointer;
+}
+#photos ul.row {
+list-style-type: none;
+}
+#carousel-thumbs .selected img{
+   opacity: 1;
+}
+#carousel-thumbs button {
+  border: 0;
+  padding: 0;
+ 
+
+}
+#carousel-thumbs img:hover {
+opacity: 1;  
+
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 60px;
+}
+
+@media all and (max-width: 767px) {
+  .carousel-container #carousel-thumbs img {
+    border-width: 3px;
+  }
+}
+@media all and (min-width: 576px) {
+  .carousel-container #carousel-thumbs {
+    position: absolute;
+   
+  }
+}
+@media all and (max-width: 576px) {
+  .carousel-container #carousel-thumbs {
+    background: #ccccce;
+  }
+}
+
+#viewMenu h1{
+  color: #1a6eb7;
+  font-weight: 700;
+}
+
+
+
+
+/***********************
+*       MENU PAGE      *
+************************/
+.menu-navbar {
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #00529b;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%; /* Set the width of the visible area */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks for inline elements */
+}
+
+@media all and (min-width: 820px) {
+  .menu-navbar {
+    justify-content: center;
+  }
+
+  .menu-navbar .arrow {
+    display: none;
+   }
+
+}
+
+.menu-navbar ul {
+  list-style: none; /* Hide unordered list bullet. */
+}
+
+.menu {
+ padding: 15px;
+  margin: 0;
+  box-sizing: border-box;
+  white-space: wrap;
+  -webkit-overflow-scrolling: touch;
+  position: relative; /* Required for animation. */
+  display: flex;
+  align-items: center;
+  gap: 15px;  /* Flexbox space between menu items must match the left/right padding of menu wrapper. */
+}
+
+.menu .item a {
+    /* Weird - Visible items inherit this from .menu but not hidden items# 6-8 when they slide in and can be seen. */
+  width: 100px;
+  height: 50px;
+  outline: 1px dotted gray;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: flex;            /* Needed to center number in middle of menu item, solution # 1 of 3. */
+  align-items: center;      /* Needed to vertically center number in middle of menu item, solution # 2 of 3. */
+  justify-content: center;  /* Needed to horizontally center number in middle of menu item, solution # 3 of 3. */
+  object-fit: cover;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.print {
+  margin: auto;
+  max-width: 500px;
+}
+
+.print span {
+  display: inline-block;
+  width: 100px;
+}
+
+.menu-navbar li {
+  float: left;
+}
+.menu-navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.menu-navbar li a:hover {
+  background-color: #1a6eb7;
+}
+.menu-navbar li a:active {
+  background-color: #3181c7;
+}
+.menu-navbar li a.selected {
+  background-color: #1a6eb7;
+}
+
+.menu-container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+
+}
+.menu-item-group {
+  display: block;
+  margin: 0;
+  padding: 40px 0;
+  position: relative;
+  z-index: 1;
+  box-sizing: inherit;
+  }
+
+.menu-items-wrapper {
+  display: flex;
+  margin: 0 12.5px;
+  justify-content: center;
+  box-sizing: inherit;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: inherit;
+  gap: 25px;
+  margin: 0 auto;
+}
+
+
+
+.menu-item-wrapper {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  display: block;
+  border: #00529b solid 1px;
+}
+
+.menu-item {
+  margin: 0;
+  padding: 25px;
+  box-sizing: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 350px;
+  justify-content: flex-start;
+}
+.navbar-container {
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+section h2 {
+  text-align: left;
+  padding: 15px;
+  padding-top: 50px;
+  padding-bottom: 0px;
+  margin: 0;
+}
+section > p {
+  text-align: left;
+  padding: 15px;
+  padding-bottom: 0px;
+  margin: 0;
+}
+section > hr {
+  margin: 30px;
+}
+.clarification {
+  font-style: italic;
+  font-size: 0.8em;
+  padding: 15px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 0;
+}
+
+
+/***********************
+*       ABOUT PAGE     *
+************************/
+.about-container {
+  background-color: #00529b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.about-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.about-container img {
+  width: 50%;
+}
+
+.mural-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  
+}
+.mural-text img{
+ width: 75%;
+}
+
+.full-mural {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ margin-bottom: 20px;
+ margin-top: 25px;
+}
+
+.history-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+}
+.history {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 450px;
+  max-width: 650px;
+  
+}
+.history p {
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  flex-wrap: wrap;
+  
+}
+.history > h2, .history > p {
+  color: #00529b;
+  font-family: "kalam-bold", cursive;
+  text-align: center;
+}
+#footer-container p {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@media (max-width: 600px) {
+  .about-row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 450px;
+    flex-shrink: 0;
+  }
+  .about-row .mural-text {
+    order: 2;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,312 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+	font-size: 100%;
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+body {
+	line-height: 1;
+	font-size: 100%;
+	font-family:Arial, Helvetica, sans-serif
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+	width:100%
+}
+.header-container {
+	position: relative;
+	margin: 1.2em auto 0;
+	zoom: 1;
+	max-width:948px;
+	border-left:1px solid #6d6d6d;
+	border-right:1px solid #6d6d6d;
+	border-top: 1px solid #6D6D6D;
+	padding: 1.250em 1.875em 0;
+	z-index:10;
+}
+.main-container {
+	min-height: 80%;
+	background-color:#FFFFFF;
+	max-width:948px;
+	padding: 0 1.875em;
+	position:relative;
+	margin: 0 auto;
+	border-left:1px solid #6d6d6d;
+	border-right:1px solid #6d6d6d;
+	padding-bottom:.50em;
+	z-index:6;
+}
+#footer-container {
+	max-width:948px;
+	padding: 0 1.875em;
+	margin: 0 auto;
+	background-color: #00529b;
+	height: 3.563em;
+	position:relative;
+	border-left:1px solid #6d6d6d;
+	border-right:1px solid #6d6d6d;
+	z-index: 5;
+	color:white;
+	}
+
+.social {
+left: 73.5%;
+    position: absolute;
+    top: 7em;
+    width: 6.78em;
+}
+.social img {
+	max-width:28px
+}
+.logo img {
+	max-width:163px
+}
+.storeFront img {
+	max-width: 922px;
+}
+.wrapper {
+	width: 100%;
+ margin: 0 2% 0 1.5%;
+ }
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+ zoom: 1;
+}
+.clearfooter {
+	height:.50em;
+	clear: both;
+}
+.copyright {
+	float:right;
+	text-transform:uppercase;
+	font-size:0.813em;
+	font-weight:bold;
+	padding-top: 1.6em;
+}
+.col {
+	float:left
+}
+.span_4_of_10 {
+	width: 39.04%;
+}
+.span_2_of_10 {
+	width: 18.72%;
+}
+.span_3_of_8 {
+	width: 36.5%;
+}
+.span_5_of_10 {
+	width: 49.2%;
+}
+.info {
+	padding: 1em 0.75em 0 1em;
+}
+
+ul.headerInformation li {
+	color: #666666;
+	font-size: 0.75em;
+	line-height: 158%;
+	list-style-type: none;
+}
+ul.headerInformation li:first-child {
+	color:#00529b;
+	text-transform:uppercase;
+	font-weight:bold;
+	font-size: 0.9em;
+}
+.blueText a {
+	color:#00529b;
+	font-weight:bold;
+	font-size: 0.7em;
+	text-decoration: none;
+}
+/*ADJUSTS*/
+.paddingTop7em {padding-top: 0.7em;}
+.positionRelative {
+	position:relative;
+}
+ @media only screen and (max-width:768px) {
+.social {
+	top:6em
+}
+}
+ @media only screen and (max-width: 480px) {
+.logo {
+	text-align: center;
+}
+ul.headerInformation {
+	text-align:center
+}
+.info {
+	padding: 0 0 2% 0
+}
+.social {
+	/*top:7em*/
+	top: 8.75em;
+}
+.span_10_of_10 {
+	width: 100%;
+}
+.span_9_of_10 {
+	width: 100%;
+}
+.span_8_of_10 {
+	width: 100%;
+}
+.span_7_of_10 {
+	width: 100%;
+}
+.span_6_of_10 {
+	width: 100%;
+}
+.span_5_of_10 {
+	width: 100%;
+}
+.span_4_of_10 {
+	width: 100%;
+}
+.span_3_of_10 {
+	width: 100%;
+}
+.span_2_of_10 {
+	width: 100%;
+}
+.span_1_of_10 {
+	width: 100%;
+}
+.span_3_of_8 {
+	width: 100%;
+}
+ }
+ /* Container for all product sections */
+.menu-container {
+    min-height: 80%;
+    background-color: #FFFFFF;
+    max-width: 948px;
+    padding: 0 1.875em;
+    position: relative;
+    margin: 0 auto;
+    border-left: 1px solid #6d6d6d;
+    border-right: 1px solid #6d6d6d;
+    padding-bottom: .50em;
+    z-index: 6;
+    display: flex;
+    flex-wrap: wrap; /* Allow product sections to wrap */
+    justify-content: center;
+}
+
+/* Product section */
+.product-section {
+    width: calc(33.33% - 20px); /* Adjusted width for three sections per row */
+    height: auto; /* Auto height */
+    margin: 10px; /* Adjusted margin to increase space between sections */
+    background-color: #fdf8ec; /* Lighter badge color */
+    border-radius: 5px;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Align items with space between them */
+}
+
+/* Product information */
+.product-info {
+    padding: 10px;
+    display: flex; /* Use flexbox to center text horizontally */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the top */
+    gap: 0; /* Add more spacing between elements */
+}
+
+/* Product name */
+.product-info h2 {
+    margin: 0; /* Add more space below the product name */
+    font-weight: bold; /* Make the product name bold */
+}
+
+/* Product image */
+.product-section img {
+    width: calc(100% - 20px); /* Adjusted width with padding */
+    height: 60%; /* Set the height to 70% of the product section */
+    max-width: 100%; /* Ensure the image doesn't overflow */
+    margin: 0 auto 5px; /* Add vertical margin */
+    border-radius: 4px; /* Add border radius to round the corners */
+}
+
+/* Product price */
+.product-info .price {
+    margin-bottom: 0; /* Add space below the price */
+    font-weight: bold;
+}
+
+/* Product description */
+.product-info .description {
+    margin: 10px 0; /* Add more space below the description */
+}
+
+
+/* Group container */
+.group-container {
+	min-height: 80%;
+    background-color: #FFFFFF;
+    max-width: 948px;
+    padding: 0 1.875em;
+    position: relative;
+    margin: 0 auto;
+    border-left: 1px solid #6d6d6d;
+    border-right: 1px solid #6d6d6d;
+    padding-bottom: .50em;
+    z-index: 6;
+    display: flex;
+    flex-wrap: wrap; /* Allow product sections to wrap */
+    justify-content: center;
+     /* Add margin between group containers */
+}
+
+/* Group heading */
+.group-container h1 {
+    text-align: center; /* Center-align the group headings */
+     /* Add some space below the group headings */
+    font-size: 24px; /* Adjust the font size of the group headings */
+    color: #333; /* Set the color of the group headings */
+}
+.section-heading {
+    text-align: center;
+    margin-top: -30px; /* Adjust this value as needed to position the headings higher */
+    margin-bottom: 20px; /* Add some spacing between sections */
+}
+ 
+
