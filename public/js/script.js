@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
     ///////////////////////////////////////////
     //                 Home JS               //
     ///////////////////////////////////////////
-    case 'views/index.ejs':
+    case '/':
+    case '/home':
       document.querySelector('#nav-home a').classList.add('nav-selected');
 
       // Initialize the carousel
@@ -57,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ///////////////////////////////////////////
     //                 Menu JS               //
     ///////////////////////////////////////////
-    case "views/menu.ejs":
+    case "/menu":
       document.querySelector('#nav-menu a').classList.add('nav-selected');
 
 
@@ -119,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ///////////////////////////////////////////
     //                 About JS              //
     ///////////////////////////////////////////
-    case "views/about.ejs":
+    case "/about":
       document.querySelector('#nav-about a').classList.add('nav-selected');
       
       break;
