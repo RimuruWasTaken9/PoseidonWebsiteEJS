@@ -271,9 +271,9 @@ opacity: 1;
   padding: 14px 16px;
   text-decoration: none;
 }
-.menu-navbar li a:hover {
+/* .menu-navbar li a:hover {
   background-color: #1a6eb7;
-}
+} */
 .menu-navbar li a:active {
   background-color: #3181c7;
 }

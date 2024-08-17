@@ -73,19 +73,28 @@ function homePageScripts() {
 function menuPageScripts() {
   $('#nav-menu a').addClass('nav-selected');
 
-  //   var navbarSelector = $("li.item a");
-  // //if a navbar button is clicked, highlight it
+  var windowWidth = $(window).width();
+  $(window).on("resize load", function () {
+    windowWidth = $(window).width();
 
-
-
-  $(window).on("resize", function () {
-    let targets = document.querySelectorAll('section');
-    targets.forEach(target => {
-      observer.observe(target);
-    });
   });
+  
+  if (windowWidth > 768) {
+    $(window).on("resize load", function () {
+      windowWidth = $(window).width();
+    });
 
-  //if the user scrolls, highlight the corresponding navbar button, the one that is closest to the top
+    $(window).on("load", sectionObserver);
+
+    $(window).on("scroll", onScrollFunction);
+
+    $("li.item a").each(function () {
+      $(this).on("click", onClickFunction($(this)));
+      $(this).on('mouseover', onMouseOverFunction($(this)));
+    });
+  }
+
+
   let observer = new IntersectionObserver((entries, observer) => {
     let topMostEntry = null;
     entries.forEach(entry => {
@@ -97,66 +106,46 @@ function menuPageScripts() {
       }
       if (topMostEntry) {
         let targetElement = topMostEntry.target;
-        document.removeEventListener("click", addEventListener("scroll", true));
-        document.removeEventListener("mousedown", addEventListener("scroll", true));
         $("li.item a").each(function () { $(this).removeClass('selected'); });
         $("#nav-" + targetElement.id + " a").addClass('selected');
         var currentSection = "#nav-" + targetElement.id + " a";
       }
     });
   }, { threshold: 0.22 }); //test for best value
+  function onClickFunction(clickedButton) {
+    $(clickedButton).addClass('selected');
 
+  }
 
-  $('li.item a').each(function () {
-    $(this).on("click", function () {
-      console.log("this was a click");
-      $(this).addClass('selected');
-      $(this).on('mouseout', function () {
-        console.log("this was the mouse leaving after click");
-        $(this).addClass('selected');
-      });
-    });
+  function onMouseOverFunction(hoveredButton) {
+    $(hoveredButton).addClass('selected');
+    $(hoveredButton).on('mouseout', onMouseOutFunction($(hoveredButton)));
+  }
+  function onMouseOutFunction(hoveredButton) {
+    $(hoveredButton).removeClass('selected');
+    backupSelect($(hoveredButton));
 
-    $(this).on('mouseover', function () {
-      console.log("this was a hover");
-      $(this).addClass('selected');
-      $(this).on('mouseout', function () {
-        console.log("this was the mouse leaving after hover");
-       $(this).removeClass('selected');
-       backupSelect($(this));
-      });
-    });
-
-
-    //if someone refreshed the page while in a section, this will highlight the correct button
-    let targets = document.querySelectorAll('section');
-    targets.forEach(target => {
+  }
+  function onScrollFunction() {
+    sectionObserver();
+  }
+  function sectionObserver() {
+    let targets = $('section');
+    targets.each(function (i, target) {
       observer.observe(target);
     });
+  }
 
-    
-  });
 
-  // $(window).on('load', function () {
-  
-  // })
-  $(window).on("scroll", function () {
-    let targets = document.querySelectorAll('section');
-    targets.forEach(target => {
-      observer.observe(target);
-    });
-    
-  });
+  //if there is no navbar selected, it will select the last one selected
+  function backupSelect(lastSelected) {
+    let navbarItems = Array.from($("li.item a"));
+    if (!(navbarItems.some(x => x.classList.contains('selected')))) {
+      $(lastSelected).addClass('selected');
+    }
+  }
 
-//if there is no navbar selected, it will select the last one selected
-function backupSelect(lastSelected) {
-  var navbarItems = Array.from($("li.item a"));
-if (!(navbarItems.some(x => x.classList.contains('selected')))) {
-  $(lastSelected).addClass('selected');
 }
-}
-}
-
 ///////////////////////////////////////////
 //                 About JS              //
 ///////////////////////////////////////////
